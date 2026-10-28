@@ -4,7 +4,11 @@ float number1;
 float number2;
 while (true)
 {
-    Console.WriteLine("Что хотите сделать?\n0 - Выйти из приложения\n1 - Сумма двух чисел\n2 - Вычитание двух чисел");
+    Console.WriteLine("Что хотите сделать?" +
+        "\n0 - Выйти из приложения" +
+        "\n1 - Сумма двух чисел" +
+        "\n2 - Вычитание двух чисел" +
+        "\n3 - Умножение двух чисел");
     choise = Console.ReadLine();
     Console.WriteLine("");
     switch (choise)
@@ -23,6 +27,12 @@ while (true)
             number2 = InputFloat();
             var sub = number1 - number2;
             Console.WriteLine($"Вычитание чисел = {sub}");
+            break;
+        case "3":
+            number1 = InputFloat();
+            number2 = InputFloat();
+            var multi = number1 * number2;
+            Console.WriteLine($"Умножение чисел = {multi}");
             break;
         default:
             Console.WriteLine("Введен неккоректный ввод.");            
