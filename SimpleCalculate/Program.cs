@@ -1,5 +1,7 @@
 ﻿
 int choise;
+float number1;
+float number2;
 while (true)
 {
     Console.WriteLine("Что хотите сделать?\n0 - Выйти из приложения\n1 - Сумма двух чисел\n2 - Вычитание двух чисел");
@@ -11,12 +13,16 @@ while (true)
             Console.WriteLine("Производится выход");
             return;
         case 1:
-            var number1 = InputFloat();
-            var number2 = InputFloat();
+            number1 = InputFloat();
+            number2 = InputFloat();
             var sum = number1 + number2;
             Console.WriteLine($"Сумма чисел = {sum}");
             break;
         case 2:
+            number1 = InputFloat();
+            number2 = InputFloat();
+            var sub = number1 - number2;
+            Console.WriteLine($"Вычитание чисел = {sub}");
             break;
         default:
             Console.WriteLine("Введен неккоректный ввод.");            
