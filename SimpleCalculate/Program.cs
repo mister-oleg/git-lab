@@ -8,7 +8,8 @@ while (true)
         "\n0 - Выйти из приложения" +
         "\n1 - Сумма двух чисел" +
         "\n2 - Вычитание двух чисел" +
-        "\n3 - Умножение двух чисел");
+        "\n3 - Умножение двух чисел" + 
+        "\n4 - Остаток от деления");
     choise = Console.ReadLine();
     Console.WriteLine("");
     switch (choise)
@@ -33,6 +34,12 @@ while (true)
             number2 = InputFloat();
             var multi = number1 * number2;
             Console.WriteLine($"Умножение чисел = {multi}");
+            break;
+        case "4":
+            number1 = InputFloat();
+            number2 = InputFloat();
+            var leftover = number1 % number2;
+            Console.WriteLine($"Остаток от деления = {leftover}");
             break;
         default:
             Console.WriteLine("Введен неккоректный ввод.");            
